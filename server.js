@@ -11,7 +11,7 @@ mongoose.connect('mongodb://daniel:web-miniproject@web-miniproject-csnyv.mongodb
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'https://web-miniproject-server.herokuapp.com');
-    res.header("default-src", '*', "style-src", 'self', 'unsafe-inline', "script-src", 'self', 'unsafe-inline', 'unsafe-eval');
+    res.header("default-src", 'none');
   	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   	res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
     next();
