@@ -7,7 +7,7 @@ var app = express();
 // set our port
 var port = process.env.PORT || 4500;
 
-mongoose.connect('mongodb://localhost:4201/emberData');
+mongoose.connect('mongodb+srv://daniel:web-miniproject@web-miniproject-csnyv.mongodb.net/emberData?retryWrites=true');
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
