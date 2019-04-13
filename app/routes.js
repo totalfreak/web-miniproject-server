@@ -3,7 +3,7 @@
 var posts = require('../api/post');
 module.exports = function(router) {
 
-    // Posting a new post and getting all posts afterwards
+    // Posting a new post and get on same subdomain
     router.route('/api/posts').post(function(req, res) {
         console.log(req.body);
         posts.addPost(req, res);        
