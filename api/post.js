@@ -8,7 +8,7 @@ module.exports.getAllPosts = function(req, res) {
         if (err) {
             res.send(err);
         }
-        res.json({posts: posts}, {meta: {total_pages:3} });
+        res.status(status).json({posts: posts});
     });
 };
 
