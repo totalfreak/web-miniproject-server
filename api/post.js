@@ -8,7 +8,7 @@ module.exports.getAllPosts = function(req, res) {
         if (err) {
             res.send(err);
         }
-        res.status(status).json({posts: posts});
+        res.json({posts: posts});
     });
 };
 
