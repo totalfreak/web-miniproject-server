@@ -8,8 +8,8 @@ module.exports.getAllPosts = function(req, res) {
         if (err) {
             res.send(err);
         }
-        res.json({posts: posts}).sort({x:1});
-    });
+        res.json({posts: posts});
+    }).limit(2).sort({x:1});
 };
 
 
