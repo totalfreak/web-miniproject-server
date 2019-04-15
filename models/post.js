@@ -5,9 +5,7 @@ var Schema = mongoose.Schema;
 
 var postSchema = new Schema({
     title: 'string',
-    image: {
-        data: Buffer, contentType: String
-    },
+    image: 'string',
     text: 'string'
 });
 
