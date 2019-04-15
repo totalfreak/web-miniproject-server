@@ -9,7 +9,7 @@ module.exports.getAllPosts = function(req, res) {
             res.send(err);
         }
         res.json({posts: posts});
-    }).limit(2).sort({x:1});
+    }).limit(2).sort({natural:1});
 };
 
 
