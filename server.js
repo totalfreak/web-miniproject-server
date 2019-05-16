@@ -1,7 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var multer = require('multer');
 
 var app = express();
 
@@ -11,7 +10,9 @@ var port = process.env.PORT || 4500;
 mongoose.connect('mongodb+srv://daniel:web-miniproject@web-miniproject-csnyv.mongodb.net/emberData?retryWrites=true');
 
 app.use(function(req, res, next) {
+    // Comment the next line for running a local version
     res.setHeader('Access-Control-Allow-Origin', 'https://web-miniproject-client.herokuapp.com');
+    // Uncomment the next line for running a local version
     //res.setHeader('Access-Control-Allow-Origin', '*');
     res.header("default-src", 'none');
   	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
